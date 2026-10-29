@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --color-violet-50: #fafafa; --color-violet-100: #f2f2f4; --color-violet-200: #e2e2e6; --color-violet-300: #b6b6bf;
+  --color-violet-400: #8d8d98; --color-violet-500: #6d6d78; --color-violet-600: #55555f; --color-violet-700: #3f3f47;
+  --color-violet-800: #2a2a30; --color-violet-900: #1a1a1e; --color-violet-950: #0c0c0e;
+  --color-fuchsia-300: #d4d4d8; --color-fuchsia-400: #a1a1aa; --color-fuchsia-500: #71717a;
+}
+
+:root { color-scheme: dark; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #f2f2f4;
+  background:
+    radial-gradient(1000px 520px at 78% -12%, rgba(255, 255, 255, 0.16), transparent 62%),
+    radial-gradient(800px 420px at -5% 0%, rgba(255, 255, 255, 0.06), transparent 60%),
+    #060607;
+  background-attachment: fixed;
+  letter-spacing: -0.005em;
+}
+h1, h2 { letter-spacing: -0.03em; }
+
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 1.5rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.paper { background: #f4f4f5; color: #0b0b0c; border-radius: 1.5rem; }
+.paper .muted { color: #6b6b74; }
+.pill { display: inline-flex; align-items: center; gap: .4rem; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05);
+  border-radius: 999px; padding: .2rem .75rem; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: #cfcfd6; }
+
+textarea, input[type="number"], input[type="text"], input[type="email"], input[type="password"], select.field {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.85rem;
+  color: inherit;
+  outline: none;
+}
+textarea:focus, input:focus { border-color: rgba(255, 255, 255, 0.55); }
+html { scroll-behavior: smooth; }

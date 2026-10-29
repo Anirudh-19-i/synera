@@ -1,0 +1,23 @@
+# Render Blueprint. Free plan = no disk, so data resets when the service restarts or sleeps (fine for a hackathon demo).
+# For real use: change plan to starter and uncomment the disk block so accounts and invoices persist.
+services:
+  - type: web
+    name: synera
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    # disk:
+    #   name: synera-data
+    #   mountPath: /data
+    #   sizeGB: 1
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PUBLIC_URL
+        sync: false
+      - key: GATEWAY_SECRET
+        generateValue: true
+      - key: ENABLE_DEMO
+        value: "1"
+      - key: DATA_DIR
+        value: /data

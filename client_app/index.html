@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IronPulse Fitness | Train Smarter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">Iron<span>Pulse</span></div>
+    <nav>
+      <a href="#bmi">BMI</a>
+      <a href="#plans">Plans</a>
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark / Light</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Hyderabad's strength studio</p>
+      <h1>Build strength that lasts.</h1>
+      <p class="lead">Coach-led training, flexible memberships and a community that shows up.</p>
+      <a class="btn" href="#bmi">Check your BMI</a>
+    </section>
+
+    <section id="bmi" class="panel">
+      <h2>BMI calculator</h2>
+      <form id="bmi-form">
+        <label>Height (cm)<input id="height-cm" type="number" min="100" max="250" required></label>
+        <label>Weight (kg)<input id="weight-kg" type="number" min="30" max="300" required></label>
+        <button class="btn" type="submit">Calculate</button>
+      </form>
+      <p id="bmi-result" aria-live="polite"></p>
+    </section>
+
+    <section id="plans" class="plans">
+      <article><h3>Starter</h3><p class="price">₹1,499/mo</p><p>Gym floor access</p></article>
+      <article class="featured"><h3>Pro</h3><p class="price">₹2,999/mo</p><p>Floor + group classes</p></article>
+      <article><h3>Elite</h3><p class="price">₹4,999/mo</p><p>Personal coaching included</p></article>
+    </section>
+  </main>
+
+  <footer>© IronPulse Fitness</footer>
+
+  <a id="whatsapp-btn" class="whatsapp" href="https://wa.me/919876543210?text=Hi%20IronPulse%2C%20I%27d%20like%20to%20join" target="_blank" rel="noopener">Chat on WhatsApp</a>
+
+  <script src="app.js"></script>
+  <!-- Synera hosted-preview protection. Reads the project id from ?pid= -->
+  <script src="/static/synera-drm.js" async></script>
+</body>
+</html>
